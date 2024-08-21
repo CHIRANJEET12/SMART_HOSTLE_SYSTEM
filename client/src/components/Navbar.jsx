@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary" >
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">Medify</a>
+        <a className="navbar-brand" href="/">Medify</a>
         <button 
           className="navbar-toggler" 
           type="button" 
@@ -20,13 +20,13 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">Home</a>
+              <a className="nav-link active" aria-current="page" href="/TalkDoc">Talk-to-doctor</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Talk to Doctor</a>
+              <a className="nav-link" href="#">Health-Monitor</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Public-engage</a>
+              <a className="nav-link" href="#">Pharmacy-help</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">Login/Signup</a>

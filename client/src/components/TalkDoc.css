@@ -1,0 +1,108 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+  }
+  
+  h1, h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* TalkDoc Page Styles */
+  .talkdoc-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .sort-filter-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .sort-filter-buttons button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sort-filter-buttons button:hover {
+    background-color: #0056b3;
+  }
+  
+  .doctors-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .doctors-list li {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .doctors-list li:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .doctors-list li h3 {
+    margin: 0;
+    color: #007bff;
+  }
+  
+  /* DoctorDetail Page Styles */
+  .doctor-detail {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .doctor-detail h1 {
+    margin-top: 0;
+    color: #007bff;
+  }
+  
+  .doctor-detail p {
+    margin: 10px 0;
+    font-size: 1.1em;
+  }
+  
+  /* Booking Button */
+  .book-appointment-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+  }
+  
+  .book-appointment-button:hover {
+    background-color: #218838;
+  }
+  

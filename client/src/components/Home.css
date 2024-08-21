@@ -89,12 +89,12 @@ body {
   }
 .pmm{
   width: 80%;
-  display: flex; /* Use Flexbox for alignment */
-  justify-content: space-around; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  display: flex; 
+  justify-content: space-around; 
+  align-items: center; 
   text-align: end;
-  margin: 0 auto; /* Center horizontally within the parent */
-  height: 100vh; /* Assuming you want it centered within the full viewport height */
+  margin: 0 auto;
+  height: 100vh; 
 }
   .pm span{
     color: #009688;
