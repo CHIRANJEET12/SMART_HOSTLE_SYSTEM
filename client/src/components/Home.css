@@ -1,3 +1,8 @@
+@font-face {
+  font-family: fontt;
+  src: url(/public/allover-modern-demo/ALLOVER\ MODERN\ DEMO.otf);
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,11 +12,12 @@ body {
   
   .home-container {
     text-align: center;
-    padding: 0 20px;
+    padding: 0 0px;
   }
   
   .hero-section {
     background-color: #009688;
+    font-family:fontt;
     color: white;
     padding: 100px 20px;
   }
@@ -62,6 +68,11 @@ body {
     width: 280px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
+  .card img {
+    width: 100%; /* Full width image */
+    height: 100px; /* Fixed height for the image */
+    object-fit: cover; /* Ensure image covers the area */
+  }
   
   .card h3 {
     font-size: 1.5rem;
@@ -73,6 +84,27 @@ body {
     color: #666;
   }
   
+  .publicDomain{
+    margin-top: 100px;
+  }
+.pmm{
+  display: flex;
+  width: 80%;
+  display: flex; /* Use Flexbox for alignment */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-align: end;
+  margin: 0 auto; /* Center horizontally within the parent */
+  height: 100vh; /* Assuming you want it centered within the full viewport height */
+}
+  .pm span{
+    color: #009688;
+  }
+  .img1 img{
+    width: 200px;
+    height: 200px;
+  }
+
   .footer {
     background-color: #333;
     color: white;
