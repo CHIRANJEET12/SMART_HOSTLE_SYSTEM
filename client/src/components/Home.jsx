@@ -82,7 +82,7 @@ export const Home = () => {
         <h2>Access the public domain and cure your health.</h2>
         <div className="pmm">
         <div className="img1">
-          <img src="" alt="" />
+          <img src="\public\download (3).jpg" alt="" />
         </div>
         <div className="pm">
           <h4>Access the <span>public domain</span> and get the <br /> most demanding help by <span>helping people</span>, <br /> Get collective mass responce from <br /> <span>specialized doctors</span> </h4>
@@ -92,6 +92,27 @@ export const Home = () => {
 
       <footer className="footer">
         <p>&copy; 2024 MediConsult. All rights reserved.</p>
+        <br />
+        <div className="foo">
+          <div className="one">
+            <h5>For doctors</h5>
+            <a href="#"><h6>profile </h6></a> <br />
+            <h5>For clinics</h5>
+            <a href="#"><h6>locate</h6></a>
+          </div>
+          <div className="two">
+          <h5>For doctors</h5>
+            <a href="#"><h6>profile </h6></a> <br />
+            <h5>For clinics</h5>
+            <a href="#"><h6>locate</h6></a>
+          </div>
+          <div className="three">
+          <h5>For doctors</h5>
+            <a href="#"><h6>profile </h6></a> <br />
+            <h5>For clinics</h5>
+            <a href="#"><h6>locate</h6></a>
+          </div>
+        </div>
       </footer>
     </div>
   );

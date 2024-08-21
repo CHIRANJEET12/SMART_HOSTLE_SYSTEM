@@ -88,10 +88,9 @@ body {
     margin-top: 100px;
   }
 .pmm{
-  display: flex;
   width: 80%;
   display: flex; /* Use Flexbox for alignment */
-  justify-content: center; /* Center horizontally */
+  justify-content: space-around; /* Center horizontally */
   align-items: center; /* Center vertically */
   text-align: end;
   margin: 0 auto; /* Center horizontally within the parent */
@@ -101,12 +100,12 @@ body {
     color: #009688;
   }
   .img1 img{
-    width: 200px;
-    height: 200px;
+    width: 70vh;
+    height: 50vh;
   }
 
   .footer {
-    background-color: #333;
+    background-color: #28328C;
     color: white;
     padding: 20px 0;
     margin-top: 50px;
@@ -114,5 +113,15 @@ body {
   
   .footer p {
     margin: 0;
+  }
+
+  .foo{
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+    display: flex;
+    margin: 0 auto; /* Center horizontally within the parent */
+    height: 30vh;
   }
   
