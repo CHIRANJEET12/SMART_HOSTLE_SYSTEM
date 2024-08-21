@@ -13,20 +13,20 @@ const doctors = [
 export const TalkDoc = () => {
     const [sortedDoctors, setSortedDoctors] = useState(doctors);
     const navigate = useNavigate();
-  
-    const handleSort = (criteria) => {
-      const sorted = [...sortedDoctors].sort((a, b) => b[criteria] - a[criteria]);
-      setSortedDoctors(sorted);
-    };
-  
-    const handleFilter = (specialty) => {
-      const filtered = doctors.filter(doctor => doctor.specialty === specialty);
-      setSortedDoctors(filtered);
-    };
-  
-    const handleDoctorClick = (doctorId) => {
-      navigate(`/doctor/${doctorId}`);
-    };
+
+    const handleSort = (criteria)=>{
+        const sorted = [...sortedDoctors].sort((a,b)=>b[criteria]-a[criteria]);
+        setSortedDoctors(sorted);
+    }
+    
+    const handleFilter = (specialty)=>{
+        const filter = doctors.filter(doctor=>doctor.specialty===specialty);
+        setSortedDoctors(filter);
+    }
+    const handleDoctorClick=(docId)=>{
+        navigate(`/doctor/${docId}`);
+    }
+
   
     return (
       <div className="container">
