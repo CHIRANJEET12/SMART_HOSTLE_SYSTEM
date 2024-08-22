@@ -10,7 +10,6 @@ function App() {
   return (
     <>
     <Router>
-    <Navbar/>
       <Routes>
         <Route exact path="/" element={<Home/>}></Route>
         <Route path="/TalkDoc" element={<TalkDoc/>}></Route>

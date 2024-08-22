@@ -1,9 +1,11 @@
 import React from 'react';
 import './Home.css';
+import Navbar from './Navbar';
 
 export const Home = () => {
   return (
     <div className="home-container">
+      <Navbar/>
       <header className="hero-section">
         <h1>Your Health Our Priority</h1>
         <p>Expert consultations and care at your fingertips</p>

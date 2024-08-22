@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import "./TalkDoc.css"
+import "./TalkDoc.css";
+import { Navbar1 } from './Navbar1';
 import { useNavigate } from 'react-router-dom';
 
 // Sample doctor data
@@ -14,52 +15,57 @@ export const TalkDoc = () => {
     const [sortedDoctors, setSortedDoctors] = useState(doctors);
     const navigate = useNavigate();
 
-    const handleSort = (criteria)=>{
-        const sorted = [...sortedDoctors].sort((a,b)=>b[criteria]-a[criteria]);
+    const handleSort = (criteria) => {
+        const sorted = [...sortedDoctors].sort((a, b) => b[criteria] - a[criteria]);
         setSortedDoctors(sorted);
-    }
-    
-    const handleFilter = (specialty)=>{
-        const filter = doctors.filter(doctor=>doctor.specialty===specialty);
-        setSortedDoctors(filter);
-    }
-    const handleDoctorClick=(docId)=>{
-        navigate(`/doctor/${docId}`);
-    }
+    };
 
-  
+    const handleSearch = (searchTerm) => {
+        const filtered = doctors.filter(doctor => 
+            doctor.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            doctor.specialty.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        setSortedDoctors(filtered);
+    };
+
+    const handleDoctorClick = (docId) => {
+        navigate(`/doctor/${docId}`);
+    };
+
     return (
-      <div className="container">
-        <div className="talkdoc-header">
-          <h1>Talk to a Doctor</h1>
-        </div>
-        
-        <div className="sort-filter-buttons">
-          <div>
-            <h2>Sort By</h2>
-            <button onClick={() => handleSort('experience')}>Experience</button>
-            <button onClick={() => handleSort('rating')}>Rating</button>
+      <>
+        <Navbar1 onSearch={handleSearch} />
+        <div className="container">
+          <div className="talkdoc-header">
+            <h1>Talk to a Doctor</h1>
           </div>
-          <div>
-            <h2>Filter By Disease</h2>
-            <button onClick={() => handleFilter('Cardiology')}>Cardiology</button>
-            <button onClick={() => handleFilter('Neurology')}>Neurology</button>
-            <button onClick={() => handleFilter('Dermatology')}>Dermatology</button>
+          
+          <div className="sort-filter-buttons">
+            <div>
+              <h2>Sort By</h2>
+              <button onClick={() => handleSort('experience')}>Experience</button>
+              <button onClick={() => handleSort('rating')}>Rating</button>
+            </div>
+            <div>
+              <h2>Filter By Disease</h2>
+              <button onClick={() => handleSearch('Cardiology')}>Cardiology</button>
+              <button onClick={() => handleSearch('Neurology')}>Neurology</button>
+              <button onClick={() => handleSearch('Dermatology')}>Dermatology</button>
+            </div>
+          </div>
+    
+          <div className="doctors-list">
+            <h2>Doctors List</h2>
+            <ul>
+              {sortedDoctors.map(doctor => (
+                <li key={doctor.id} onClick={() => handleDoctorClick(doctor.id)}>
+                  <h3>{doctor.name}</h3>
+                  <p>{doctor.experience} years - Rating: {doctor.rating}</p>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
-  
-        <div className="doctors-list">
-          <h2>Doctors List</h2>
-          <ul>
-            {sortedDoctors.map(doctor => (
-              <li key={doctor.id} onClick={() => handleDoctorClick(doctor.id)}>
-                <h3>{doctor.name}</h3>
-                <p>{doctor.experience} years - Rating: {doctor.rating}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
+      </>
     );
-  };
-  
+};
