@@ -1,10 +1,12 @@
-import React from 'react';
-
+import React, { useContext } from 'react';
+import { UserContext } from './UseContext';
 function Navbar() {
+
+  const user = useContext(UserContext);
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary" >
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">Medify</a>
+        <a className="navbar-brand" href="/Home">Medify</a>
         <button 
           className="navbar-toggler" 
           type="button" 
@@ -27,9 +29,10 @@ function Navbar() {
             <li className="nav-item">
               <a className="nav-link" href="#">Pharmacy-help</a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Login/Signup</a>
-            </li>
+            {user?.loggedIn == true?( <li className="nav-item">
+              <a className="nav-link" href="/login">Login/Signup</a>
+            </li>):("")}
+           
           </ul>
 
           {/* login icon */}

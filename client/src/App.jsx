@@ -1,24 +1,26 @@
-import { useState,React } from 'react'
-import Navbar from './components/Navbar'
-import { Home } from './components/Home'
-import { TalkDoc } from './components/TalkDoc'
-import { DoctorDetail } from './components/DoctorDetail'
-import {BrowserRouter as Router,Routes,Route} from "react-router-dom"
+import { useState, React, useContext } from 'react';
+import Navbar from './components/Navbar';
+import { Home } from './components/Home';
+import { TalkDoc } from './components/TalkDoc';
+import { DoctorDetail } from './components/DoctorDetail';
+import GoogleAuth from './components/GoogleAuth';
+import { UserContext } from './components/UseContext';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
 function App() {
-
+  const user = useContext(UserContext);
+  
   return (
-    <>
     <Router>
       <Routes>
-        <Route exact path="/" element={<Home/>}></Route>
-        <Route path="/TalkDoc" element={<TalkDoc/>}></Route>
+        <Route path="/" element={user?.loggedIn ? <Home /> : <Navigate to="/login" />} />
+        <Route path="/Home" element={<Home />} />
+        <Route path="/login" element={<GoogleAuth />} />
+        <Route path="/TalkDoc" element={<TalkDoc />} />
         <Route path="/doctor/:id" element={<DoctorDetail />} />
       </Routes>
     </Router>
-      
-    </>
-  )
+  );
 }
 
-export default App
+export default App;
