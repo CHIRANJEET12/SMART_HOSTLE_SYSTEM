@@ -9,7 +9,7 @@ export const Home = () => {
       <header className="hero-section">
         <h1>Your Health Our Priority</h1>
         <p>Expert consultations and care at your fingertips</p>
-        <a href="#" className="btn-primary">Book a Consultation</a>
+        <a href="/TalkDoc" className="btn-primary">Book a Consultation</a>
       </header>
 
       <section className="services-section">

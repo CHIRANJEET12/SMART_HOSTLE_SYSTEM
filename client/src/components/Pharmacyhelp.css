@@ -1,0 +1,17 @@
+.chat-container {
+    height: 400px;
+    overflow-y: auto;
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    background-color: #f9f9f9;
+  }
+  
+  .chat-input {
+    margin-top: 10px;
+  }
+  
+  .map-container {
+    height: 400px;
+    width: 100%;
+  }
+  
